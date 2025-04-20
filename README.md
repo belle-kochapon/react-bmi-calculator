@@ -1,14 +1,12 @@
-# React User Registration Form with `react-hook-form`
+# React BMI Calculator
 
-This project demonstrates a user registration form built using the `react-hook-form` library. It showcases how to efficiently handle multiple form inputs, implement basic validation, and manage form submission with significantly less code compared to traditional `useState`-based approaches (see https://github.com/belle-kochapon/react-usestate-login-form and https://github.com/belle-kochapon/react-bmi-calculator). 
+This project is a simple Body Mass Index (BMI) calculator built using React. It demonstrates the use of the `useState` hook to manage numerical input for height and weight and performs a basic BMI calculation upon form submission.
 
 ## Key Concepts Illustrated
 
-- **`react-hook-form`:** Utilizes the `useForm` hook for streamlined form management, including:
-    - **`register`:** Registers input fields with the form and enables validation rules. This example demonstrates basic `required` and `minLength` validation for the username field.
-    - **`handleSubmit`:** Handles form submission and provides access to the form data.
-- **TypeScript for Type Safety:** Defines the `UserRegisterInputs` type to ensure type safety for the form data.
-- **Simplified Input Handling:** Eliminates the need for individual state variables and `onChange` handlers for each input field.
+- **`useState` Hook:** Utilized to manage the state for `height`, `weight`, and the calculated `bmi`.
+- **`onChange` Event Handling:** Updates the `height` and `weight` state as the user types in the input fields. The `+` operator is used to ensure the input value is treated as a number.
+- **`onSubmit` Event Handling:** Calculates the BMI based on the entered height and weight when the form is submitted. The calculated BMI is then formatted to two decimal places and updates the `bmi` state.
 
 ## Usage
 
@@ -18,17 +16,9 @@ This project demonstrates a user registration form built using the `react-hook-f
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd react-hook-form-user-registration
+    cd react-bmi-calculator
     ```
 3.  **Install dependencies:**
-    ```bash
-    npm install react-hook-form
-    # or
-    yarn add react-hook-form
-    # or
-    pnpm add react-hook-form
-    ```
-4.  **Install other project dependencies:**
     ```bash
     npm install
     # or
@@ -36,7 +26,7 @@ This project demonstrates a user registration form built using the `react-hook-f
     # or
     pnpm install
     ```
-5.  **Start the development server:**
+4.  **Start the development server:**
     ```bash
     npm run dev
     # or
@@ -44,18 +34,6 @@ This project demonstrates a user registration form built using the `react-hook-f
     # or
     pnpm dev
     ```
-6.  **View in your browser:** Open your browser and navigate to the address provided by your development server.
+5.  **View in your browser:** Open your browser and navigate to the address provided by your development server (typically `http://localhost:5173` for Vite or `http://localhost:3000` for Create React App).
 
-Interact with the registration form, paying attention to the username field which has basic validation rules. Upon submission, the form data will be logged to your browser's console.
-
-![image](https://github.com/user-attachments/assets/b858907b-0f23-47ff-bf65-cef6dfdb5e45)
-
-
-## Potential Further Enhancements
-
-- Implement more comprehensive validation rules for all fields (e.g., email format, password strength, password confirmation matching).
-- Display user-friendly error messages for validation failures.
-- Integrate with an API endpoint to handle the actual user registration process.
-- Explore advanced features of `react-hook-form` such as custom validation, form state management, and performance optimizations.
-
-This example provides a solid foundation for building complex forms in React with the help of the `react-hook-form` library.
+Enter your height (in cm) and weight (in kg) into the respective fields and click the button to see your calculated BMI displayed above the form.

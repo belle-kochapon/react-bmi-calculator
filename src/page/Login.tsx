@@ -1,12 +1,12 @@
 import { ChangeEvent, useState } from "react";
 import Button from "../components/Button";
-import UserRegisterForm from "../components/UserRegisterForm";
+import BmiCalculate from "../components/BmiCalculate";
 
-// Create function separately in a component name "UserRegisterForm.tsx", then import it here
+// Create function separately in a component name "BmiCalculate.tsx", then import it here
 function Login() {
   return (
     <>
-       <UserRegisterForm></UserRegisterForm> 
+       <BmiCalculate></BmiCalculate> 
     </>
   );
 }
